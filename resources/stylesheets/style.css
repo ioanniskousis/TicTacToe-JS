@@ -40,4 +40,81 @@ main {
   border-left: 10px solid rgb(0, 172, 30);
   border-right: 10px solid rgb(0, 172, 30);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-div {
+  /* background-color: black; */
+  width: calc(100% - 20px);
+  height: 200px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  grid-gap: 1%;
+  /* border: 1px solid black; */
+  /* transition: all 0.2s; */
+}
+
+.grid-cell {
+  background-color: white;
+  /* width: 1fr;
+  height: 1fr; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-cell > img {
+  width: 50%;
+  height: 50%;
+}
+
+.one {
+  border-right: 1px solid rgb(0, 172, 30);
+  border-bottom: 1px solid rgb(0, 172, 30);
+}
+
+.two {
+  border-left: 1px solid rgb(0, 172, 30);
+  border-right: 1px solid rgb(0, 172, 30);
+  border-bottom: 1px solid rgb(0, 172, 30);
+}
+
+.three {
+  border-left: 1px solid rgb(0, 172, 30);
+  border-bottom: 1px solid rgb(0, 172, 30);
+}
+
+.four {
+  border-top: 1px solid rgb(0, 172, 30);
+  border-right: 1px solid rgb(0, 172, 30);
+  border-bottom: 1px solid rgb(0, 172, 30);
+}
+
+.five {
+  border: 1px solid rgb(0, 172, 30);
+}
+
+.six {
+  border-left: 1px solid rgb(0, 172, 30);
+  border-top: 1px solid rgb(0, 172, 30);
+  border-bottom: 1px solid rgb(0, 172, 30);
+}
+
+.seven {
+  border-right: 1px solid rgb(0, 172, 30);
+  border-top: 1px solid rgb(0, 172, 30);
+}
+
+.eight {
+  border-left: 1px solid rgb(0, 172, 30);
+  border-right: 1px solid rgb(0, 172, 30);
+  border-top: 1px solid rgb(0, 172, 30);
+}
+
+.nine {
+  border-left: 1px solid rgb(0, 172, 30);
+  border-top: 1px solid rgb(0, 172, 30);
 }
