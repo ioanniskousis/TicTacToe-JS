@@ -9,36 +9,45 @@
 </head>
 <body>
   <header class="">
-    
-    <div class="header-caption">
-      Tic-Tac-Toe
+    <div class="header-caption">Tic-Tac-Toe</div>
+    <div id="player-caption">
+      <div id="player-name"></div>
+      <img id="player-sign"></img>
     </div>
+    
+    <div class="game-menu">
+      <img id="settings-sign" src="./resources/images/settings.png"></img>
+      <img id="restart-sign" src="./resources/images/sinchronize.png"></img>
+    </div>
+
   </header>
+
   <main id="main">
     <div id="grid-div" class="grid-div">
-      <div class="grid-cell one">
+      <div id="one" class="grid-cell" cellIndex='0'></div>
+      <div id="two" class="grid-cell" cellIndex='1'></div>
+      <div id="three" class="grid-cell" cellIndex='2'></div>
 
-      </div>
-      <div class="grid-cell two">
-        <img src="resources/images/x-red.png" alt="" class="">
-      </div>
-      <div class="grid-cell three">
-        <img src="resources/images/circle-blue.png" alt="" class="">
-      </div>
+      <div id="four" class="grid-cell" cellIndex='3'></div>
+      <div id="five" class="grid-cell" cellIndex='4'></div>
+      <div id="six" class="grid-cell" cellIndex='5'></div>
 
-      <div class="grid-cell four"></div>
-      <div class="grid-cell five">
-        <img src="resources/images/circle-blue.png" alt="" class="">
-      </div>
-      <div class="grid-cell six"></div>
+      <div id="seven" class="grid-cell" cellIndex='6'></div>
+      <div id="eight" class="grid-cell" cellIndex='7'></div>
+      <div id="nine" class="grid-cell" cellIndex='8'></div>
 
-      <div class="grid-cell seven"></div>
-      <div class="grid-cell eight"></div>
-      <div class="grid-cell nine"></div>
-      
     </div>
   </main>
-
+  <div id="backgroundDiv"></div>
+  <div id="winnerDiv">
+    <img id="winnerCup" src="./resources/images/cup-blue.png" alt="winner Cup">
+    <div id="cupofcoffee">A cup of coffee for</div>
+    <div id="winnerLab">Winner</div>
+    <div id="thewinner">The Winner</div>
+  </div>
+  <div id="gameOverDiv">
+    <div id="gameOverLab">Game Is Over</div>
+  </div>
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
