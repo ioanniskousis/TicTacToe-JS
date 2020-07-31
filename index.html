@@ -8,7 +8,7 @@
   <title>Tic Tac Toe</title>
 </head>
 <body>
-  <header class="">
+  <header>
     <div class="header-caption">Tic-Tac-Toe</div>
     <div id="player-caption">
       <div id="player-name"></div>
@@ -53,43 +53,43 @@
       <div class="playersName">
         <div>
           <label for="player1name" class="">Player 1</label>
-          <input id="player1name" name="player1name" type="text" class="">
+          <input id="player1name" name="player1name" type="text" player="0">
         </div>
         <div>
           <label for="player2name" class="">Player 2</label>
-          <input id="player2name" name="player2name" type="text" class="">
+          <input id="player2name" name="player2name" type="text" player="1">
         </div>
       </div>
       <div class="playersSignsContainer">
         <div class="playerSigns">
           <div class="playerSignSection">
             <label>Image</label>
-            <div class="">
-              <div class=""></div>
-              <div class=""></div>
+            <div class="playerSignsSelector">
+              <div id="player0Sign0" class="signSelector dashed" player="0" index="0" selector="image"></div>
+              <div id="player0Sign1" class="signSelector dashed" player="0" index="1" selector="image"></div>
             </div>  
           </div>
           <div class="playerSignSection">
             <label>Colour</label>
-            <div class="">
-              <div class=""></div>
-              <div class=""></div>
+            <div class="playerSignsSelector">
+              <div id="player0Color0" class="signSelector blueColor dashed" player="0" index="0" selector="color"></div>
+              <div id="player0Color1" class="signSelector redColor dashed" player="0" index="1" selector="color"></div>
             </div>  
           </div>
         </div>
         <div class="playerSigns">
           <div class="playerSignSection">
             <label>Image</label>
-            <div class="">
-              <div class=""></div>
-              <div class=""></div>
+            <div class="playerSignsSelector">
+              <div id="player1Sign0" class="signSelector dashed" player="1" index="0" selector="image"></div>
+              <div id="player1Sign1" class="signSelector dashed" player="1" index="1" selector="image"></div>
             </div>  
           </div>
           <div class="playerSignSection">
             <label>Colour</label>
-            <div class="">
-              <div class=""></div>
-              <div class=""></div>
+            <div class="playerSignsSelector">
+              <div id="player1Color0" class="signSelector blueColor dashed" player="1" index="0" selector="color"></div>
+              <div id="player1Color1" class="signSelector redColor dashed" player="1" index="1" selector="color"></div>
             </div>  
           </div>
         </div>

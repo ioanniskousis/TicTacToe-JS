@@ -241,7 +241,7 @@ main {
 }
 
 .settingsContainer {
-  margin-top: 40px;
+  margin-top: 60px;
   border: 1px solid white;
   border-radius: 6px;
   width: 90%;
@@ -252,12 +252,13 @@ main {
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
+  background-color: #000;
 }
 
 .settingsContainer label {
   color: white;
   font-size: medium;
-  margin: 10px;
+  margin: 0 10px;
 }
 
 .playersName {
@@ -288,7 +289,7 @@ main {
 .playersSignsContainer {
   /* background-color: #eee; */
   width: 100%;
-  height: 250px;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,20 +310,77 @@ main {
 .playerSignSection {
   width: 100%;
   height: 48%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 4px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .playerSignSection label {
   display: block;
   width: 100%;
-  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-.playerColorSection {
+.playerSignsSelector {
+  /* border: 1px solid white; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.signSelector {
+  margin: 0 5px;
+  width: 45%;
+  height: 90%;
+  /* border: 1px dashed white; */
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-position: center center;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+
+.dashed {
+  border: 1px dashed white;
+}
+
+.xBlue {
+  background-image: url('../images/x-blue.png');
+}
+
+.xRed {
+  background-image: url('../images/x-red.png');
+}
+
+.oBlue {
+  background-image: url('../images/circle-blue.png');
+}
+
+.oRed {
+  background-image: url('../images/circle-red.png');
+}
+
+.blueColor {
+  background-image: url('../images/color-blue.png');
+}
+
+.redColor {
+  background-image: url('../images/color-red.png');
+}
+
+.signSelector:hover {
+  background-color: #ccc;
+}
+
+.signSelector:active {
+  background-color: #aaa;
 }
 
 #close-settings {

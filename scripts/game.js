@@ -1,14 +1,22 @@
 /* eslint-disable prefer-template */
-/* eslint-disable no-alert */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-undef */
 class GameBoard {
   constructor() {
-    this.reset();
-    // const cPlayer = JSON.parse(localStorage.getItem('tictactoe_current_player'));
-    // this.currentPlayerIndex = cPlayer || 0;
-    this.currentPlayerIndex = 0;
+    const board = JSON.parse(localStorage.getItem('tictactoe_board'));
+    if (board) {
+      this.cells = board;
+    } else {
+      this.reset();
+    }
+    const cPlayer = JSON.parse(localStorage.getItem('tictactoe_current_player'));
+    this.currentPlayerIndex = cPlayer || 0;
     this.players = [];
+  }
+
+  save() {
+    localStorage.setItem('tictactoe_board', JSON.stringify(this.cells));
+    localStorage.setItem('tictactoe_current_player', JSON.stringify(this.currentPlayerIndex));
   }
 
   currentPlayer() {
@@ -21,11 +29,9 @@ class GameBoard {
 
   swapPlayers() {
     this.currentPlayerIndex = this.currentPlayerIndex === 0 ? 1 : 0;
-    localStorage.setItem('tictactoe_current_player', JSON.stringify(this.currentPlayerIndex));
   }
 
   reset() {
-    // this.gameIsOver = false;
     this.cells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   }
 
@@ -80,11 +86,6 @@ class GameBoard {
   }
 
   gameOver() {
-    // this.winner = this.winningPlayer();
-    // if (this.winner > 0) {
-    //   return true;
-    // }
-
     if (this.cells.every(this.isChecked)) {
       return true;
     }
@@ -98,6 +99,7 @@ class GameBoard {
 
     this.cells[cellIndex] = this.currentPlayer().id;
     this.swapPlayers();
+    this.save();
 
     return true;
   }
