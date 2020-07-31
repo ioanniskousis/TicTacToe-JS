@@ -1,4 +1,3 @@
-
 /* eslint-disable import/extensions */
 import {
   gel, crel,
@@ -84,6 +83,24 @@ function hideGameOver(gameOverDiv, game) {
   showPlayer(game);
 }
 
+function showSettings() {
+  const settingsDiv = gel('settingsDiv');
+  settingsDiv.style.opacity = 1.0;
+  settingsDiv.style.left = '0';
+  settingsDiv.style.top = '0';
+  settingsDiv.style.width = '100%';
+  settingsDiv.style.height = '100%';
+}
+
+function hideSettings() {
+  const settingsDiv = gel('settingsDiv');
+  settingsDiv.style.opacity = 0.0;
+  settingsDiv.style.left = '50%';
+  settingsDiv.style.top = '50%';
+  settingsDiv.style.width = '0';
+  settingsDiv.style.height = '0';
+}
+
 function hideBackgroundDiv(backgroundDiv, game) {
   gel('player-sign').style.visibility = 'visible';
   gel('player-sign').style.display = 'block';
@@ -102,4 +119,6 @@ export {
   showGameOver,
   hideGameOver,
   hideBackgroundDiv,
+  showSettings,
+  hideSettings,
 };

@@ -5,13 +5,15 @@ import {
 import {
   resize,
   clickCell,
-  interfaceReset,
   hideWinner,
   showWinner,
   showPlayer,
   showGameOver,
   hideGameOver,
   hideBackgroundDiv,
+  interfaceReset,
+  showSettings,
+  hideSettings,
 } from './controlFlow.js';
 
 import GameBoard from './game.js';
@@ -60,6 +62,13 @@ gel('winnerDiv').addEventListener('click', () => {
   hideWinner();
 });
 
+gel('restart-sign').addEventListener('click', () => {
+  game.reset();
+  interfaceReset();
+  game.swapPlayers();
+  showPlayer(game);
+});
+
 const backgroundDiv = gel('backgroundDiv');
 backgroundDiv.addEventListener('click', () => {
   hideBackgroundDiv(backgroundDiv, game);
@@ -68,4 +77,12 @@ backgroundDiv.addEventListener('click', () => {
 const gameOverDiv = gel('gameOverDiv');
 gel('gameOverDiv').addEventListener('click', () => {
   hideGameOver(gameOverDiv, game);
+});
+
+gel('settings-sign').addEventListener('click', () => {
+  showSettings();
+});
+
+gel('close-settings').addEventListener('click', () => {
+  hideSettings();
 });
