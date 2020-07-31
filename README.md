@@ -73,6 +73,13 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 
   The Player class holds information about the 2 players - their name and the image for their moves which is either an X-image or a Circle. Players' info is also stored in localStorage. The player's info can be edited using a settings view.  
 
+  There are 5 JavaScript files.  
+    - main.js         : Initializes objects and event handlers, and applies the game logic  
+    - game.js         : Implements the GameBoard class  
+    - player.js       : Implements the Player class  
+    - controlFlow.js  : Implements all handlers and rendering   
+    - utils.js        : Helper file for shorhand commands  
+
 <hr/>
 
 <!-- ABOUT THE PROJECT -->
@@ -92,7 +99,7 @@ By clicking the restart button at the top-right the game is reset and the player
 Initially, the 2 players are named 'Player 1' and 'Player 2'. 
 Their name can be edited using the settings view which can be selected by clicking the settings button at the top-right. 
 They also can select check-image and image color between blue and red. 
-If the page closes before the end of the game, it is stored and can be continued at ant time. 
+If the page closes before the end of the game, it is stored and can be continued at any time. 
 
 <hr/>
 
