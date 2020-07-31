@@ -21,18 +21,37 @@ header {
   height: 60px;
   width: 100%;
   padding: 0 10px;
-  background-color: #ccc; 
+  background-color: #ccc;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .header-caption {
-  font-size: 36px;
+  position: absolute;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-caption > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-caption > a:hover {
+  background-color: #eee;
+}
+
+.header-caption > a:active {
+  background-color: #ddd;
 }
 
 #player-caption {
-  margin-right: 60px;
   font-size: 24px;
   display: flex;
   justify-content: center;
@@ -46,13 +65,14 @@ header {
 }
 
 .game-menu {
+  position: absolute;
+  right: 10px;
   width: 100px;
   height: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 10px;
-  /* background-color: #ddd; */
 }
 
 #restart-sign {
@@ -85,8 +105,8 @@ main {
   height: calc(100vh - 60px);
   width: 90%;
   max-width: 800px;
-  border-left: 10px solid  #ccc; 
-  border-right: 10px solid #ccc; 
+  border-left: 10px solid  #ccc;
+  border-right: 10px solid #ccc;
   position: relative;
   display: flex;
   justify-content: center;
@@ -108,7 +128,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 50% 50%;
@@ -181,6 +200,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 #winnerCup {
   margin-bottom: 30px;
 }
@@ -189,7 +209,6 @@ main {
 #winnerLab,
 #thewinner {
   font-size: 48px;
-  /* background-color: rgba(255, 255, 255, 0.8); */
   color: white;
   border-radius: 10px;
   padding: 4px 20px;
@@ -227,7 +246,7 @@ main {
 #settingsDiv {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
-  opacity: 0.0;
+  opacity: 0;
   left: 50%;
   top: 50%;
   width: 0;
@@ -287,7 +306,6 @@ main {
 }
 
 .playersSignsContainer {
-  /* background-color: #eee; */
   width: 100%;
   height: 260px;
   display: flex;
@@ -299,7 +317,6 @@ main {
   width: 45%;
   height: 100%;
   margin: 0 10px;
-  /* background-color: #aaa; */
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
@@ -310,7 +327,6 @@ main {
 .playerSignSection {
   width: 100%;
   height: 48%;
-  /* border: 1px solid white; */
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -326,7 +342,6 @@ main {
 }
 
 .playerSignsSelector {
-  /* border: 1px solid white; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -338,7 +353,6 @@ main {
   margin: 0 5px;
   width: 45%;
   height: 90%;
-  /* border: 1px dashed white; */
   cursor: pointer;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -402,14 +416,8 @@ main {
   color: black;
 }
 
-
 @media screen and (max-width: 600px) {
-  .header-caption {
-    font-size: 22px;
-  }
-
   #player-caption {
     font-size: 18px;
-    margin-right: 0;
   }
 }
