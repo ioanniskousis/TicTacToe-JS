@@ -6,11 +6,12 @@ import {
 const playerClasses = [['xBlue', 'xRed'], ['oBlue', 'oRed']];
 const playerImages = [['x-blue.png', 'x-red.png'], ['circle-blue.png', 'circle-red.png']];
 const playerCups = ['cup-blue.png', 'cup-red.png'];
+const imagesFolder = './resources/images/';
 
 function resize() {
   const main = gel('main');
   const grid = gel('grid-div');
-  const mainHeight = main.offsetHeight - 20;
+  const mainHeight = main.offsetHeight - 40;
   const gridWidth = main.offsetWidth - 40;
   const sideSize = Math.min(mainHeight, gridWidth);
   grid.style.height = (sideSize).toString().concat('px');
@@ -23,7 +24,7 @@ function clickCell(cell, game) {
   if (game.checkCell(cellIndex)) {
     const img = crel('img');
     const playerImage = playerImages[currentPlayer.image][currentPlayer.color];
-    const imageUrl = '../resources/images/'.concat(playerImage);
+    const imageUrl = imagesFolder.concat(playerImage);
     img.setAttribute('src', imageUrl);
     cell.appendChild(img);
     return true;
@@ -48,7 +49,7 @@ function interfaceRender(game) {
       const cell = gel(ids[index]);
       const img = crel('img');
       const playerImage = playerImages[player.image][player.color];
-      const imageUrl = '../resources/images/'.concat(playerImage);
+      const imageUrl = imagesFolder.concat(playerImage);
       img.setAttribute('src', imageUrl);
       cell.appendChild(img);
     }
@@ -59,7 +60,7 @@ function showPlayer(game) {
   const player = game.currentPlayer();
   const playerImage = playerImages[player.image][player.color];
   gel('player-name').textContent = player.name.concat(' is playing');
-  gel('player-sign').setAttribute('src', './resources/images/'.concat(playerImage));
+  gel('player-sign').setAttribute('src', imagesFolder.concat(playerImage));
 }
 
 function showWinner(winningPlayer, game) {
@@ -67,7 +68,7 @@ function showWinner(winningPlayer, game) {
   const backgroundDiv = gel('backgroundDiv');
   backgroundDiv.style.visibility = 'visible';
   const playerCup = playerCups[winningPlayer.color];
-  gel('winnerCup').setAttribute('src', './resources/images/'.concat(playerCup));
+  gel('winnerCup').setAttribute('src', imagesFolder.concat(playerCup));
   winnerDiv.style.opacity = 1.0;
   winnerDiv.style.left = '0';
   winnerDiv.style.top = '0';
