@@ -33,6 +33,8 @@
   <p align="center">
     This project is part of the Microverse curriculum in JavaScript course!
     <br />
+    <a href="https://ioanniskousis.github.io/TicTacToe-JS/"><strong>Live Version</strong></a>
+    <br />
     <a href="https://github.com/ioanniskousis/TicTacToe-JS"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -58,6 +60,7 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 - [Application Instructions](#application-instructions)
 - [System Requierments](#system-requierments)
 - [Development](#development)
+- [Live Version](#live-version)
 - [Built With](#built-with)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
@@ -117,6 +120,12 @@ If the page closes before the end of the game, it is stored and can be continued
     
     Use VSCode and Live Server to show index.html
   ``` 
+<hr/>
+
+## Live Version
+
+  [Tic-Tac-Toe](https://ioanniskousis.github.io/TicTacToe-JS/)
+
 <hr/>
 
 ## Built With
