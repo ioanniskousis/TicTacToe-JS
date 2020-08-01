@@ -106,7 +106,7 @@ If the page closes before the end of the game, it is stored and can be continued
 
 ## System Requierments
   - JavaScript Enabled
-  - You need to Disbale Cross-Origin-Restrictions from your browser, if you want to open the index.html from your file system without using a server.  
+  - You need to Disable Cross-Origin-Restrictions from your browser, if you want to open the index.html from your file system without using a server.  
 
 <hr/>
 
