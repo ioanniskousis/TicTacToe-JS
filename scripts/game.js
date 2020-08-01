@@ -1,6 +1,4 @@
-/* eslint-disable prefer-template */
 /* eslint-disable class-methods-use-this */
-/* eslint-disable no-undef */
 class GameBoard {
   constructor() {
     const board = JSON.parse(localStorage.getItem('tictactoe_board'));

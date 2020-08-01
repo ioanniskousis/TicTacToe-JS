@@ -70,6 +70,7 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
   Two main classes, Gameboard and Player, are used to manage game data. 
 
   The Gameboard class holds an array of cells to keep track of the players' moves. The game data is persistently stored in localStorage and retrieved each time the page is loaded. It also holds pointers to its 2 players. After each player's move, it checks if the game is over and if there is a winner. 
+  In details, the cells array initially is [0, 0, 0, 0, 0, 0, 0, 0, 0]. Each time a player checks a cell the particular cell takes a value of 1 or 2. For example, after player1 checks cell[3] then the array is [0, 0, 0, 1, 0, 0, 0, 0, 0], and if player2 checks cell[5] then the array becomes [0, 0, 0, 1, 0, 2, 0, 0, 0]. When none of the items is 0 then the game is over. When there is a pattern denoting a row, column or diagonal then there is a winner.  
 
   The Player class holds information about the 2 players - their name and the image for their moves which is either an X-image or a Circle. Players' info is also stored in localStorage. The player's info can be edited using a settings view.  
 
