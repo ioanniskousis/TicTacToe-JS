@@ -47,9 +47,11 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 
 <hr />
 
-## Application Screen Shot  
+## Application Screen Shots  
 
 <img src="resources/images/homepage.png" alt="the homepage">
+<hr />
+<img src="resources/images/player-settings.png" alt="player-settings">
 <hr />
 
 <!-- TABLE OF CONTENTS -->
