@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-alert */
 class Player {
   constructor(id) {
     this.id = id + 1;
