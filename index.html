@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="resources/images/grid.png"/>
+  <link rel="stylesheet" href="resources/stylesheets/style.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <header>
+    <div class="header-caption">
+      <a href="index.html">
+        <img src="./resources/images/grid.png" alt="grid">
+      </a>
+    </div>
+    <div id="player-caption">
+      <div id="player-name"></div>
+      <img id="player-sign"></img>
+    </div>
+    
+    <div class="game-menu">
+      <img id="settings-sign" src="./resources/images/settings.png"></img>
+      <img id="restart-sign" src="./resources/images/sinchronize.png"></img>
+    </div>
+
+  </header>
+
+  <main id="main">
+    <div id="grid-div" class="grid-div">
+      <div id="one" class="grid-cell" cellIndex='0'></div>
+      <div id="two" class="grid-cell" cellIndex='1'></div>
+      <div id="three" class="grid-cell" cellIndex='2'></div>
+
+      <div id="four" class="grid-cell" cellIndex='3'></div>
+      <div id="five" class="grid-cell" cellIndex='4'></div>
+      <div id="six" class="grid-cell" cellIndex='5'></div>
+
+      <div id="seven" class="grid-cell" cellIndex='6'></div>
+      <div id="eight" class="grid-cell" cellIndex='7'></div>
+      <div id="nine" class="grid-cell" cellIndex='8'></div>
+
+    </div>
+  </main>
+  <div id="backgroundDiv"></div>
+  <div id="winnerDiv">
+    <img id="winnerCup" src="./resources/images/cup-blue.png" alt="winner Cup">
+    <div id="cupofcoffee">A cup of coffee for</div>
+    <div id="winnerLab">Winner</div>
+    <div id="thewinner">The Winner</div>
+  </div>
+  <div id="gameOverDiv">
+    <div id="gameOverLab">Game Is Over</div>
+  </div>
+  <div id="settingsDiv">
+    <div class="settingsContainer">
+      <div class="playersName">
+        <div>
+          <label for="player1name">Player 1</label>
+          <input id="player1name" name="player1name" type="text" player="0">
+        </div>
+        <div>
+          <label for="player2name">Player 2</label>
+          <input id="player2name" name="player2name" type="text" player="1">
+        </div>
+      </div>
+      <div class="playersSignsContainer">
+        <div class="playerSigns">
+          <div class="playerSignSection">
+            <label>Image</label>
+            <div class="playerSignsSelector">
+              <div id="player0Sign0" class="signSelector dashed" player="0" index="0" selector="image"></div>
+              <div id="player0Sign1" class="signSelector dashed" player="0" index="1" selector="image"></div>
+            </div>  
+          </div>
+          <div class="playerSignSection">
+            <label>Colour</label>
+            <div class="playerSignsSelector">
+              <div id="player0Color0" class="signSelector blueColor dashed" player="0" index="0" selector="color"></div>
+              <div id="player0Color1" class="signSelector redColor dashed" player="0" index="1" selector="color"></div>
+            </div>  
+          </div>
+        </div>
+        <div class="playerSigns">
+          <div class="playerSignSection">
+            <label>Image</label>
+            <div class="playerSignsSelector">
+              <div id="player1Sign0" class="signSelector dashed" player="1" index="0" selector="image"></div>
+              <div id="player1Sign1" class="signSelector dashed" player="1" index="1" selector="image"></div>
+            </div>  
+          </div>
+          <div class="playerSignSection">
+            <label>Colour</label>
+            <div class="playerSignsSelector">
+              <div id="player1Color0" class="signSelector blueColor dashed" player="1" index="0" selector="color"></div>
+              <div id="player1Color1" class="signSelector redColor dashed" player="1" index="1" selector="color"></div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="close-settings">
+      Close
+    </div>
+  </div>
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
