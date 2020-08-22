@@ -154,8 +154,8 @@ If the page closes before the end of the game, it is stored and can be continued
 ## Testing
   ### Jest has been used to test-drive this project  
 
-  Tests have been applied to class GameBoard held in game.js  
-  All functions are pure and have a relevant test in game.test.js   
+  Tests have been applied to class GameBoard held in [game.js](src/game.js)   
+  All functions are pure and have a relevant test in [game.test.js](test/game.test.js).   
 
 <hr/>
 
