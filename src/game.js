@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 class GameBoard {
   constructor(useLocalStorage = true) {
     this.useLocalStorage = useLocalStorage;
@@ -36,6 +35,7 @@ class GameBoard {
     this.cells = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   }
 
+  // eslint-disable-next-line class-methods-use-this
   isChecked(cell) {
     return cell > 0;
   }
@@ -53,6 +53,7 @@ class GameBoard {
     return sets;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   playerIsWinningSet(playerId, set) {
     for (let elementIndex = 0; elementIndex < set.length; elementIndex += 1) {
       const element = set[elementIndex];
