@@ -10,7 +10,7 @@ describe('the game class functionality', () => {
     game.addPlayer(new Player(1, false));
   });
 
-  test('game.prepareSets() there are 8 winning sets', () => {
+  test('prepareSets() there are 8 winning sets', () => {
     const sets = game.prepareSets();
     expect(sets.length).toBe(8);
   });

@@ -158,6 +158,12 @@ If the page closes before the end of the game, it is stored and can be continued
   All functions are pure and have a relevant test in [game.test.js](test/game.test.js).   
   No other code in this project gives space for testing.  
 
+  please run
+  ```
+    npm run test
+  ```
+  to test GameBoard class functionality.  
+
 <hr/>
 
 ## Live Version
