@@ -1,12 +1,19 @@
-import GameBoard from '../scripts/game';
+import GameBoard from '../src/game';
 
-let game;
+describe('the game class functionality', () => {
+  let game;
 
-beforeEach(() => {
-  game = new GameBoard();
-});
+  beforeEach(() => {
+    game = new GameBoard();
+  });
 
-test('maps all winning sets', () => {
-  const sets = game.prepareSets();
-  expect(sets).toContainEqual([0, 0, 0]);
+  test('there are 8 winning sets', () => {
+    const sets = game.prepareSets();
+    expect(sets.length).toBe(8);
+  });
+
+  test('maps all winning sets', () => {
+    const sets = game.prepareSets();
+    expect(sets).toContainEqual([0, 0, 0]);
+  });
 });
