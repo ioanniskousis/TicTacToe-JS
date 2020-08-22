@@ -1,7 +1,7 @@
 {
   "name": "tictactoe-js",
   "version": "1.0.0",
-  "description": "<!-- *** Thanks for checking out this README Template. If you have a suggestion that would *** make this better, please fork the repo and create a pull request or simply open *** an issue with the tag \"enhancement\". *** Thanks again! Now go create something AMAZING! :D -->",
+  "description": "The traditional game tic-tac-toe built with HTML5, CSS3 and JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "jest",

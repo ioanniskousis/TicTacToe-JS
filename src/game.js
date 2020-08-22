@@ -1,20 +1,23 @@
 /* eslint-disable class-methods-use-this */
 class GameBoard {
-  constructor() {
-    const board = JSON.parse(localStorage.getItem('tictactoe_board'));
+  constructor(useLocalStorage = true) {
+    this.useLocalStorage = useLocalStorage;
+    const board = useLocalStorage ? JSON.parse(localStorage.getItem('tictactoe_board')) : null;
     if (board) {
       this.cells = board;
     } else {
       this.reset();
     }
-    const cPlayer = JSON.parse(localStorage.getItem('tictactoe_current_player'));
+    const cPlayer = useLocalStorage ? JSON.parse(localStorage.getItem('tictactoe_current_player')) : 0;
     this.currentPlayerIndex = cPlayer || 0;
     this.players = [];
   }
 
   save() {
-    localStorage.setItem('tictactoe_board', JSON.stringify(this.cells));
-    localStorage.setItem('tictactoe_current_player', JSON.stringify(this.currentPlayerIndex));
+    if (this.useLocalStorage) {
+      localStorage.setItem('tictactoe_board', JSON.stringify(this.cells));
+      localStorage.setItem('tictactoe_current_player', JSON.stringify(this.currentPlayerIndex));
+    }
   }
 
   currentPlayer() {

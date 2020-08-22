@@ -64,6 +64,7 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 - [Application Instructions](#application-instructions)
 - [System Requierments](#system-requierments)
 - [Development](#development)
+- [Testing](#testing)
 - [Live Version](#live-version)
 - [Built With](#built-with)
 - [Contributors](#contributors)
@@ -148,6 +149,14 @@ If the page closes before the end of the game, it is stored and can be continued
     
     Use VSCode and Live Server to show index.html
   ``` 
+<hr/>
+
+## Testing
+  ### Jest has been used to test-drive this project  
+
+  Tests have been applied to class GameBoard held in game.js  
+  All functions are pure and have a relevant test in game.test.js   
+
 <hr/>
 
 ## Live Version
