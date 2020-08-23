@@ -64,6 +64,7 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 - [Application Instructions](#application-instructions)
 - [System Requierments](#system-requierments)
 - [Development](#development)
+- [Testing](#testing)
 - [Live Version](#live-version)
 - [Built With](#built-with)
 - [Contributors](#contributors)
@@ -76,16 +77,40 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
   The project is implemented using an HTML page - the index.html. 
   Two main classes, Gameboard and Player, are used to manage game data. 
 
-  The Gameboard class holds an array of cells to keep track of the players' moves. The game data is persistently stored in localStorage and retrieved each time the page is loaded. It also holds pointers to its 2 players. After each player's move, it checks if the game is over and if there is a winner. 
-  In details, the cells array initially is [0, 0, 0, 0, 0, 0, 0, 0, 0]. Each time a player checks a cell the particular cell takes a value of 1 or 2. For example, after player1 checks cell[3] then the array is [0, 0, 0, 1, 0, 0, 0, 0, 0], and if player2 checks cell[5] then the array becomes [0, 0, 0, 1, 0, 2, 0, 0, 0]. When none of the items is 0 then the game is over. When there is a pattern denoting a row, column or diagonal then there is a winner.  
+  * The Gameboard class holds an array of cells to keep track of the players' moves. The game data is persistently stored in localStorage and retrieved each time the page is loaded. It also holds pointers to its 2 players.  
+  * After each player's move, it checks  
+      1. if the game is over and   
+      2. if there is a winner  
+  In details, the cells array initially is 
+  ```
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]. 
+  ```
+  * Each time a player checks a cell the particular cell takes a value of 1 or 2.  
+  * For example, after player1 checks cell[3] then the array is 
+  ```
+  [0, 0, 0, 1, 0, 0, 0, 0, 0], 
+  ```
+  and if player2 checks cell[5] then the array becomes 
+  ```
+  [0, 0, 0, 1, 0, 2, 0, 0, 0]. 
+  ```
+  * When none of the items is 0 then the game is over.   
+  * When there is a pattern denoting a row, column or diagonal then there is a winner.  
 
-  Two instances of the Player class hold information about the 2 players - their name and the image for their moves which is either an X-image or a Circle. Players' info is also stored in localStorage. The player's info can be edited using a settings view.  
+  Two instances of the Player class hold information about the 2 players - their *name* and the *image* for their moves which is either an *X-image* or a *Circle*. Players' info is also stored in *localStorage*. The player's info can be edited using a settings view.  
+  <img src="resources/images/player-settings.png" alt="player-settings" width="300">
+<hr/>
 
   There are 5 JavaScript files.  
-    - main.js         : Initializes objects and event handlers, and applies the game logic  
+
+    - index.js         : Initializes objects and event handlers, and applies the game logic  
+
     - game.js         : Implements the GameBoard class  
+
     - player.js       : Implements the Player class  
+
     - controlFlow.js  : Implements all handlers and rendering   
+
     - utils.js        : Helper file for shorhand commands  
 
 <hr/>
@@ -124,6 +149,21 @@ If the page closes before the end of the game, it is stored and can be continued
     
     Use VSCode and Live Server to show index.html
   ``` 
+<hr/>
+
+## Testing
+  ### Jest has been used to test-drive this project  
+
+  Tests have been applied to class GameBoard held in [game.js](src/game.js)   
+  All functions are pure and have a relevant test in [game.test.js](test/game.test.js).   
+  No other code in this project gives space for testing.  
+
+  please run
+  ```
+    npm run test
+  ```
+  to test GameBoard class functionality.  
+
 <hr/>
 
 ## Live Version
