@@ -1,12 +1,11 @@
-/* eslint-disable import/extensions */
 import {
   gel, crel,
-} from './utils.js';
+} from './utils';
 
 const playerClasses = [['xBlue', 'xRed'], ['oBlue', 'oRed']];
 const playerImages = [['x-blue.png', 'x-red.png'], ['circle-blue.png', 'circle-red.png']];
 const playerCups = ['cup-blue.png', 'cup-red.png'];
-const imagesFolder = './resources/images/';
+const imagesFolder = '../resources/images/';
 
 function resize() {
   const main = gel('main');

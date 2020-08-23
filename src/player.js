@@ -1,7 +1,8 @@
 class Player {
-  constructor(id) {
+  constructor(id, useLocalStorage = true) {
     this.id = id + 1;
-    const store = JSON.parse(localStorage.getItem('tictactoe_player'.concat(this.id.toString())));
+    const item = 'tictactoe_player'.concat(this.id.toString());
+    const store = useLocalStorage ? JSON.parse(localStorage.getItem(item)) : null;
     if (store) {
       this.name = store.name;
       this.image = parseInt(store.image, 10);

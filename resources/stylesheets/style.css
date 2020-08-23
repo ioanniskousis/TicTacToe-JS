@@ -367,27 +367,27 @@ main {
 }
 
 .xBlue {
-  background-image: url('../images/x-blue.png');
+  background-image: url('../../resources/images/x-blue.png');
 }
 
 .xRed {
-  background-image: url('../images/x-red.png');
+  background-image: url('../../resources/images/x-red.png');
 }
 
 .oBlue {
-  background-image: url('../images/circle-blue.png');
+  background-image: url('../../resources/images/circle-blue.png');
 }
 
 .oRed {
-  background-image: url('../images/circle-red.png');
+  background-image: url('../../resources/images/circle-red.png');
 }
 
 .blueColor {
-  background-image: url('../images/color-blue.png');
+  background-image: url('../../resources/images/color-blue.png');
 }
 
 .redColor {
-  background-image: url('../images/color-red.png');
+  background-image: url('../../resources/images/color-red.png');
 }
 
 .signSelector:hover {

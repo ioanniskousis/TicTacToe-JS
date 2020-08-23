@@ -1,7 +1,8 @@
-/* eslint-disable import/extensions */
+import '../resources/stylesheets/style.css';
+
 import {
   gel, gelc,
-} from './utils.js';
+} from './utils';
 import {
   resize,
   clickCell,
@@ -16,10 +17,10 @@ import {
   hideSettings,
   selectSetting,
   interfaceRender,
-} from './controlFlow.js';
+} from './controlFlow';
 
-import GameBoard from './game.js';
-import Player from './player.js';
+import GameBoard from './game';
+import Player from './player';
 
 const game = new GameBoard();
 const player1 = new Player(0);

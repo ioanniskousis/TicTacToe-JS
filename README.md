@@ -64,6 +64,7 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 - [Application Instructions](#application-instructions)
 - [System Requierments](#system-requierments)
 - [Development](#development)
+- [Testing](#testing)
 - [Live Version](#live-version)
 - [Built With](#built-with)
 - [Contributors](#contributors)
@@ -102,7 +103,7 @@ The traditional table game tic-tac-toe built with HTML5, CSS3 and JavaScript
 
   There are 5 JavaScript files.  
 
-    - main.js         : Initializes objects and event handlers, and applies the game logic  
+    - index.js         : Initializes objects and event handlers, and applies the game logic  
 
     - game.js         : Implements the GameBoard class  
 
@@ -148,6 +149,21 @@ If the page closes before the end of the game, it is stored and can be continued
     
     Use VSCode and Live Server to show index.html
   ``` 
+<hr/>
+
+## Testing
+  ### Jest has been used to test-drive this project  
+
+  Tests have been applied to class GameBoard held in [game.js](src/game.js)   
+  All functions are pure and have a relevant test in [game.test.js](test/game.test.js).   
+  No other code in this project gives space for testing.  
+
+  please run
+  ```
+    npm run test
+  ```
+  to test GameBoard class functionality.  
+
 <hr/>
 
 ## Live Version
